@@ -40,6 +40,7 @@ const updateTask = async (req, res)=>{
         if(!task){
             res.status(404).json({msg: `No task with id ${taskID}`})
         }
+        res.status(200).json({task})
     } catch (error) {
         res.status(500).json({msg:error})        
     }
